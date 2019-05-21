@@ -26,7 +26,6 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                sh 'mvn jar:jar install:install help:evaluate -Dexpression=project.name'
                 sh 'java -jar target/spring-rest-0.0.1-SNAPSHOT.jar'
             }
         }
